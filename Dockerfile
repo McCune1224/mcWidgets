@@ -1,22 +1,8 @@
-# Stage 1: Build the CSS with Tailwind
-FROM node:16 AS frontend
-
-WORKDIR /app
-
-# Copy package.json and package-lock.json
-COPY package*.json ./
-
-# Install dependencies
-RUN npm install
-
 # Copy the Tailwind CSS files
 COPY static/css/styles.css ./static/css/
 COPY tailwind.config.js ./
-
-# Build the Tailwind CSS
-RUN npm run build
-
-# Stage 2: Build the Go application
+#
+# Build the Go application
 FROM golang:1.23 AS backend
 
 WORKDIR /app
