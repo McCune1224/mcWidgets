@@ -6,6 +6,7 @@ import (
 	"os"
 
 	"github.com/a-h/templ"
+	_ "github.com/joho/godotenv/autoload"
 	"github.com/labstack/echo/v4"
 )
 
