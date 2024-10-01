@@ -1,11 +1,12 @@
-# Copy the Tailwind CSS files
-COPY static/css/styles.css ./static/css/
-COPY tailwind.config.js ./
-#
 # Build the Go application
 FROM golang:1.23 AS backend
 
 WORKDIR /app
+
+# Copy the Tailwind CSS files
+COPY static/css/styles.css ./static/css/
+COPY tailwind.config.js ./
+#
 
 # Copy Go modules and download dependencies
 COPY go.mod go.sum ./
