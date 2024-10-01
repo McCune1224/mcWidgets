@@ -1,0 +1,18 @@
+package pages
+
+import "mcwidgets/templates/components/base"
+
+templ IndexPage() {
+	@base.Base() {
+		// Super HD Home Page using tailwindcss styling:
+		<div class="flex flex-col items-center justify-center min-h-screen px-4 py-12 sm:px-6 lg:px-8 mx-auto">
+			<div class="text-center">
+				<h1 class="text-4xl font-bold tracking-tight  sm:text-5xl">
+					<span class="block">mcWidgets</span>
+					<span class="block text-indigo-600">Big old goodie bag of widgets webapp.</span>
+				</h1>
+				<p class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0"></p>
+			</div>
+		</div>
+	}
+}
